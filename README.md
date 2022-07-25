@@ -1,1 +1,1 @@
-# shop_levhaolam
+# Репозиторий по автотестам для shop-levhaolam на языке Python 
