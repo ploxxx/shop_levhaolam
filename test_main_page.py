@@ -12,6 +12,4 @@ def test_sign_in_the_site(browser):
     link = "https://shop.levhaolam.com/"
     page = MainPage(browser, link)
     page.open()
-    time.sleep(2)
     page.go_to_sign_in()
-    time.sleep(2)
