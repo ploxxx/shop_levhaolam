@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from selenium.webdriver.chrome.options import Options
 from .base_page import BasePage
+from .locators import MainPageLocators
 
 class MainPage(BasePage):
    
@@ -17,4 +18,4 @@ class MainPage(BasePage):
         login_password.send_keys("Vld5444789")
         self.browser.find_element(By.XPATH,"//button[@name='login']").click()
         icons_user = self.browser.find_element(By.XPATH,"//div[@class='col col__user_desktop']")
-        assert self.is_element_present(icons_user),("Not sign in")
+        assert self.is_element_present(*MainPageLocators.ICONS_USER),("Not sign in")
